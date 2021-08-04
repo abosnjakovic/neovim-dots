@@ -46,6 +46,7 @@ lvim.plugins = {
 
   {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
   "nvim-telescope/telescope-project.nvim",
+  "nvim-telescope/telescope-z.nvim",
 
   -- zen mode
   "stevearc/aerial.nvim",

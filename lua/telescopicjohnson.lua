@@ -54,9 +54,9 @@ require("telescope").setup {
               {'~/.config', max_depth = 4},
           },
           hidden_files = true -- default: false
-          
       }
   }
 }
 require('telescope').load_extension('fzf')
 require'telescope'.load_extension('project')
+require'telescope'.load_extension('z')
