@@ -10,7 +10,7 @@ lvim.builtin.which_key.mappings["<space>"] = { ":Telescope commands<cr>", "Comma
 lvim.builtin.which_key.mappings.s.s = { '<cmd>lua require"telescope".extensions.project.project{ display_type = "full" }<CR>', 'Project'}
 lvim.builtin.which_key.mappings.g.i = { '<cmd>lua require("telescope.builtin").git_status(require("telescope.themes").get_dropdown({}))<cr>', "Status"}
 lvim.builtin.which_key.mappings.s.z = { "<cmd>lua require'telescope'.extensions.z.list{}<CR>", 'Z'}
-lvim.builtin.which_key.mappings["z"] = { ":Twilight<cr>", "Zen"}
+lvim.builtin.which_key.mappings["z"] = { ":Twilight<cr> | :MinimapToggle<cr>", "Zen"}
 
 vim.api.nvim_command([[
 set shell=/opt/homebrew/bin/fish
@@ -64,3 +64,18 @@ map  N <Plug>(easymotion-prev)map s <Plug>(easymotion-overwin-f2)
 ]])
 
 
+-- TODO saga?
+--   l = {
+--     name = "LSP",
+--     f = { ":Lspsaga lsp_finder<cr>", "Find" },
+--     a = { ":Lspsaga code_action<CR>", "Action" },
+--     h = { ":Lspsaga hover_doc<CR>", "Hover" },
+--     k = { '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(-1)<CR>', "Scroll" },
+--     j = { '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(1)<CR>', "Scroll" },
+--     s = { ":Lspsaga signature_help<CR>", "Signature" },
+--     i = { ":Lspsaga show_line_diagnostics<CR>", "Diagnostics" },
+--     n = { ":Lspsaga diagnostic_jump_next<CR>", "Diag Next" },
+--     p = { ":Lspsaga diagnostic_jump_prev<CR>", "Diag Prev" },
+--     r = { ":Lspsaga rename<CR>", "Rename" },
+--     d = {  ":Lspsaga preview_definition<CR>", "Definition" },
+--   },
