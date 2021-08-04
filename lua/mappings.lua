@@ -10,6 +10,7 @@ lvim.builtin.which_key.mappings["<space>"] = { ":Telescope commands<cr>", "Comma
 lvim.builtin.which_key.mappings.s.s = { '<cmd>lua require"telescope".extensions.project.project{ display_type = "full" }<CR>', 'Project'}
 lvim.builtin.which_key.mappings.g.i = { '<cmd>lua require("telescope.builtin").git_status(require("telescope.themes").get_dropdown({}))<cr>', "Status"}
 lvim.builtin.which_key.mappings.s.z = { "<cmd>lua require'telescope'.extensions.z.list{}<CR>", 'Z'}
+lvim.builtin.which_key.mappings["z"] = { ":Twilight<cr>", "Zen"}
 
 vim.api.nvim_command([[
 set shell=/opt/homebrew/bin/fish

@@ -2,23 +2,14 @@ require "mappings"
 require "telescopicjohnson"
 require "bugger"
 require "langs"
+require "vanityhall"
 
 -- general
 lvim.format_on_save = true
 lvim.lint_on_save = true
-lvim.colorscheme = "material"
-vim.g.material_style = "deep ocean"
-vim.g.material_italic_comments = true
-vim.g.material_italic_keywords = true
-vim.g.material_italic_functions = true
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.dashboard.active = true
-lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
-
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
 --   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
@@ -29,7 +20,6 @@ lvim.plugins = {
 
   -- theme
   "marko-cerovac/material.nvim",
-
 
   -- motions
   "tpope/vim-repeat",
@@ -50,25 +40,7 @@ lvim.plugins = {
 
   -- zen mode
   "stevearc/aerial.nvim",
-  { "folke/twilight.nvim",
-  config = function()
-    lvim.builtin.which_key.mappings["z"] = { ":Twilight<cr>", "Zen"}
-
-    require("twilight").setup {
-      dimming = {
-        alpha = 0.25, -- amount of dimming
-        color = { "Normal", "#ffffff" },
-      },
-      context = 10, -- amount of lines we will try to show around the current line
-      expand = { -- for treesitter, we we always try to expand to the top-most ancestor with these types
-      "function",
-      "method",
-      "table",
-      "if_statement",
-    },
-    exclude = {}, -- exclude these filetypes
-  }
-end},
+  "folke/twilight.nvim",
 
 -- END plugins
 }
