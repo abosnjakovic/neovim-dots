@@ -1,7 +1,13 @@
 lvim.leader = "space"
+
+lvim.builtin.which_key.setup.plugins.presets.motions = true
+lvim.builtin.which_key.setup.plugins.presets.operators = true
+lvim.builtin.which_key.setup.plugins.presets.text_objects = true
+
 lvim.builtin.which_key.mappings["q"] = { ":qa!<cr>", "Quit!"}
 lvim.builtin.which_key.mappings["r"] = { ":so %<cr>", "Reload"}
 lvim.builtin.which_key.mappings["<space>"] = { ":Telescope commands<cr>", "Commands"}
+lvim.builtin.which_key.mappings.s.s = { '<cmd>lua require"telescope".extensions.project.project{ display_type = "full" }<CR>', 'Project'}
 
 vim.api.nvim_command([[
 set shell=/opt/homebrew/bin/fish
